@@ -76,5 +76,9 @@ submitBtn.addEventListener("click",()=>{
 	// console.log(`${hours}  ${minutes}`);
 	createItem(timeSum,h2,`${totalHr}hr : ${totalMins}mins`);
 	h2.classList.add("mt-5","py-3");
-	console.log(`${totalHr}hr and ${totalMins}mins`);
+	
+	//making empty an array
+	hours.splice(0,hours.length);
+	minutes.splice(0,minutes.length);
+	//console.log(`${totalHr}hr and ${totalMins}mins`);
 });
