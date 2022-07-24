@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+	font-family: 'Roboto', sans-serif;
+}
+:root{
+  --light-blue: #33b5e5;
+  --white: #ffffff;
+  --black: #000000;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dedede;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media (max-width:  767px){
+  .box{
+    box-shadow: none !important;
+  }
+  .time-sum{
+    margin-top: 4rem;
+  }
+  .time-picker{
+      /*background-color: red;*/
+  }
+  .calculate-time-btn{
+    display: block;
+    margin: auto;
+  }
+}

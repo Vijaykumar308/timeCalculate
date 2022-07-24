@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="description" content="Calculate time in hours base">
+    <meta name="keywords" content="Calculate My Time, github, vijay kumar">
+    <meta name="author" content="Vijay Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculate My Time</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet/css/clocklet.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/clocklet"></script>
+  </head>
+  <body>
+
+    <div class="container-fuild header" style="background-color: #2e91a1;"> 
+    	<h3 class="h4 py-3 text-white p-3 mb-5">Calculate My Time</h3>
+    </div>
+  
+  <main class="container">
+    <div class="d-flex justify-content-between align-items-center shadow  py-3 px-3">    
+      <h2>Time based calculation</h2>
+      <div class="select-days">
+
+        <div class="form-check form-check-inline">  
+          <input class="form-check-input" type="radio" name="days" id="days5" value="5" checked>
+          <label class="form-check-label" for="days5">five days</label>
+        </div>
+
+        <div class="form-check form-check-inline">  
+          <input class="form-check-input" type="radio" name="days" id="days6" value="6">
+          <label class="form-check-label" for="days6">six days</label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row mx-1 mt-5">
+
+      <div class="time-section col-md-4 shadow box" style="height: 241px;">
+        <div class="text-center my-5 py-3 time-picker">
+          <input data-clocklet="format: H:mm " value="9:01" placeholder="select time" id="timeClock">
+          <input type="submit" value="add+" class="btn btn-danger" id="addTime">
+          <input type="submit" id="submitBtn" class="btn btn-success mt-3 calculate-time-btn" value="calculate time ">
+        </div>
+      </div>
+
+      <div class="time-list text-center col-md-3 shadow mx-auto box" id="timeList">
+        <h5>Time list</h5>
+        <hr class="w-50 mx-auto">  
+            <code class="default-text fs-6 px-3 py-1 rounded bg-danger text-white" style="">time list show</code>
+      </div>
+
+      <div class="time-sum col-md-4 shadow text-center box">
+        <h5>Total Time</h5>
+        <hr class="w-50 mx-auto">
+        <h4 class="mt-5 default-text">Total time shows here</h4>  
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="shadow-sm text-center text-white py-2" style="background-color: #00000073;letter-spacing:1px;margin-top: 8.8rem;">
+    <!-- <p class="text-center text-white" style="padding: 14px;">Copyright &copy 2022-2024 jwvijaykumar@gmail.com</p> -->
+    Copyright &copy 2022-2024 jwvijaykumar@gmail.com
+
+  </footer>
+
+  <!-- bootstrap cdn links -->
+			<!-- popper js -->
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+		<!-- Bootstrap 5 -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>    
+    <script src="main.js"></script>
+  </body>
+</html>
