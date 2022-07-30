@@ -23,8 +23,29 @@ const addCSS = (element,cssProperty,cssValue)=>{
 let weeksDaysTimes = [];
 let hours = [];
 let minutes = [];
-console.log(defaultText);
+// console.log(defaultText);
 let timeAddNumber = 0;
+
+function isAlpha(stringArr){
+	for(let i=0;i<=stringArr.length;i++){
+		if( (stringArr[i] >= 'A' && stringArr[i] <= "Z") || 
+		    (stringArr[i] >= 'a' && stringArr[i] <= "z"))
+		{
+			return true;
+		}
+	}
+	return false;
+}
+
+function validateTime(time){
+	console.log(time);
+	if( (time.length == 0) && (!isAlpha(time) )) {
+		return false;
+	}else{
+		return true;
+	}
+}
+
 addTime.addEventListener("click",()=>{
 	defaultText[0].remove();
 	let numberOfDays = document.querySelector("[name='days']");
@@ -37,19 +58,24 @@ addTime.addEventListener("click",()=>{
 
 		const timeList = document.getElementById("timeList");
 		const code = document.createElement('code');
-		createItem(timeList,code,timeClock.value);
-		addCSS(code,"letterSpacing","2px");
-		weeksDaysTimes.push(timeClock.value);
-		timeAddNumber++;
+		// timeClock.value = "";
+		res = validateTime(timeClock.value);
+		if(res){
+			createItem(timeList,code,timeClock.value);
+			addCSS(code,"letterSpacing","2px");
+			weeksDaysTimes.push(timeClock.value);
+			timeAddNumber++;
+		}else{
+			alert("time not valid");
+		}
 	}
-	
 });
-
 let h2 = document.createElement("h2");
 
 submitBtn.addEventListener("click",()=>{
 	defaultText[1].remove();
-	weeksDaysTimes.map(function(val,index){
+	console.log("time in array: "+weeksDaysTimes);
+	weeksDaysTimes.forEach(function(val,index){
 		let time = val.split(":");
 		if(time[0] > 12){
 			time[0] = time[0] - 12;
@@ -57,7 +83,6 @@ submitBtn.addEventListener("click",()=>{
 		hours.push(time[0]);
 		minutes.push(time[1]);
 	});
-
 	let totalHr = 0;
 	hours.map(function(hr){
 		totalHr += Number(hr);
@@ -72,13 +97,8 @@ submitBtn.addEventListener("click",()=>{
 		totalHr += 1;
 		totalMins -= 60;
 	}	
-
-	// console.log(`${hours}  ${minutes}`);
 	createItem(timeSum,h2,`${totalHr}hr : ${totalMins}mins`);
-	h2.classList.add("mt-5","py-3");
-	
-	//making empty an array
 	hours.splice(0,hours.length);
 	minutes.splice(0,minutes.length);
-	//console.log(`${totalHr}hr and ${totalMins}mins`);
+	h2.classList.add("mt-5","py-3");
 });
