@@ -13,6 +13,9 @@
     <title>Calculate My Time</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/clocklet/css/clocklet.min.css">
     <script src="https://cdn.jsdelivr.net/npm/clocklet"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+    <link rel="icon" href="logo.png" sizes="192x192">
   </head>
   <body>
 
@@ -34,7 +37,6 @@
           <input class="form-check-input" type="radio" name="days" id="days6" value="6">
           <label class="form-check-label" for="days6">six days</label>
         </div>
-
       </div>
     </div>
 
@@ -45,6 +47,8 @@
           <input data-clocklet="format: H:mm " value="9:01" placeholder="select time" id="timeClock">
           <input type="submit" value="add+" class="btn btn-danger" id="addTime">
           <input type="submit" id="submitBtn" class="btn btn-success mt-3 calculate-time-btn" value="calculate time ">
+          <input type="submit" id="resetBtn" class="btn btn-secondary mt-3 calculate-time-btn" value="Reset">
+          <!-- <input type="submit" id="lessHrBtn" class="btn btn-warning mt-3 calculate-time-btn" value="Hr less"> -->
         </div>
       </div>
 
