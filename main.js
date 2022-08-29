@@ -1,6 +1,7 @@
 const addTime = document.querySelector("#addTime");
 const submitBtn = document.querySelector("#submitBtn");
 const timeSum = document.querySelector(".time-sum");
+const resetBtn = dcoument.querySelector("#resetBtn");
 
 let timeClock =  document.querySelector("#timeClock");
 let defaultText = document.querySelectorAll(".default-text");
@@ -47,6 +48,10 @@ function validateTime(time){
 	}
 }
 
+resetBtn.addEventListener("click",()=>{
+	console.log("resetBtn clicked");
+	window.location.reload();
+});
 addTime.addEventListener("click",()=>{
 	defaultText[0].remove();
 	let numberOfDays = document.querySelector("[name='days']");
