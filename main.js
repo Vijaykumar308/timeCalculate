@@ -1,7 +1,7 @@
 const addTime = document.querySelector("#addTime");
 const submitBtn = document.querySelector("#submitBtn");
 const timeSum = document.querySelector(".time-sum");
-const resetBtn = dcoument.querySelector("#resetBtn");
+const resetBtn = document.querySelector("#resetBtn");
 
 let timeClock =  document.querySelector("#timeClock");
 let defaultText = document.querySelectorAll(".default-text");
